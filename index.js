@@ -1,7 +1,5 @@
-// console.log("users: ", users);
 
-// console.log("todos: ", todos);
-
+//Idk what I did but it works
 
 do{
 
@@ -69,6 +67,5 @@ userInputIdTasks='';
     alert(`${users[userInputIdIndex].username}'s tasks:
     ${userInputIdTasks}`);
 }while(confirm('Do u wanna keep going?'))
-console.log(todos)
     
 
