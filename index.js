@@ -2,7 +2,10 @@
 
 // console.log("todos: ", todos);
 
-let message = ''
+
+do{
+
+    let message = ''
 for(let user of users){
     message += `
     User id: ${user.id},  Name: ${user.name}, City:${user.address.city}`
@@ -65,7 +68,7 @@ userInputIdTasks='';
     }
     alert(`${users[userInputIdIndex].username}'s tasks:
     ${userInputIdTasks}`);
-
+}while(confirm('Do u wanna keep going?'))
 console.log(todos)
     
 
