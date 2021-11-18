@@ -13,7 +13,7 @@ for(let user of users){
 alert(message)
 
 
-let userInputId = Number(prompt(`Search toDo list for used id:`))
+let userInputId = Number(prompt(`Search toDo list for user id:`))
 let userInputIdIndex;
 
 for(let i=0;i< users.length;i++){
@@ -21,7 +21,14 @@ for(let i=0;i< users.length;i++){
         userInputIdIndex = i
     }
 }
-
+let userInputIdTasks='';
+for(let task of todos){
+    if(task.userId===userInputId){
+        userInputIdTasks+='Task id ' + task.id + ': ' + task.title+'\n';
+    }
+}
+alert(`${users[userInputIdIndex].username}'s tasks:
+${userInputIdTasks}`);
 // debugger
 if(confirm(`Add new toDo or show list of toDos?
 Ok = New ToDo
@@ -32,7 +39,7 @@ Cancel = Show list` )){
     id:todos[todos.length-1].id+1
 })
 }
-    let userInputIdTasks='';
+    userInputIdTasks='';
     for(let task of todos){
         if(task.userId===userInputId){
             userInputIdTasks+='Task id ' + task.id + ': ' + task.title+'\n';
